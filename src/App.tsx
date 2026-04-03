@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import DashboardLayout from "@/components/DashboardLayout";
 import LoginPage from "@/pages/Login";
 import Dashboard from "@/pages/Dashboard";
+import CadastroPage from "@/pages/Cadastro";
 import ClientesPage from "@/pages/Clientes";
 import ProdutosPage from "@/pages/Produtos";
 import VendasPage from "@/pages/Vendas";
@@ -35,6 +36,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<PublicRoute><LoginPage /></PublicRoute>} />
+            <Route path="/cadastro" element={<PublicRoute><CadastroPage /></PublicRoute>} />
             <Route element={<ProtectedRoutes />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/clientes" element={<ClientesPage />} />
