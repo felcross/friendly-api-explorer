@@ -68,6 +68,12 @@ export default function LoginPage() {
               {loading ? "Entrando..." : "Entrar"}
             </Button>
           </form>
+          <p className="text-center text-sm text-muted-foreground mt-4">
+            Não tem uma conta?{" "}
+            <Link to="/cadastro" className="text-primary hover:underline font-medium">
+              Criar conta
+            </Link>
+          </p>
         </CardContent>
       </Card>
     </div>
